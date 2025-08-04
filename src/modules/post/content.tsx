@@ -1,7 +1,8 @@
 "use client";
 
+import useQueryPost from "@/app/hooks/use-query-post";
 import Post from "@/components/post";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 
 const mockPost: Post = {
   id: "1",
@@ -12,13 +13,20 @@ const mockPost: Post = {
 
 const Content = () => {
   const router = useRouter();
+  const { data, isLoading, error } = useQueryPost();
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
-      <button onClick={() => router.back()} className="text-sm text-white font-bold">
+      <button
+        onClick={() => router.back()}
+        className="text-sm text-white font-bold"
+      >
         {"← Back"}
       </button>
-      <Post post={mockPost} />
+      <Post post={data} />
     </div>
   );
 };

@@ -8,7 +8,7 @@ interface PaginationProps {
 }
 
 const Pagination = ({ totalPages }: PaginationProps) => {
-  const currentPage = useSearchParams().get("page") || "1";
+  const currentPage = useSearchParams().get("page") || "1"; // To hook into the current page from the URL , default is 1
   return (
     <div className="flex gap-4 text-sm font-semibold">
       {Array.from({ length: totalPages }).map((_, index) => (

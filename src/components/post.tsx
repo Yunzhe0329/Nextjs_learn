@@ -9,8 +9,7 @@ const Post = ({ post }: PostProps) => {
       <h3 className="text-sm text-white font-bold">{title}</h3>
       <p className="text-sm text-white/50 mt-2">{content}</p>
       <p className="text-sm text-white/50 mt-2">
-        {/* {new Date(createdAt).toLocaleString()} */}
-        2025-07-25
+        {new Date(createdAt).toLocaleString()}
       </p>
     </div>
   );

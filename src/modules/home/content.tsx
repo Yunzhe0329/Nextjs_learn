@@ -1,6 +1,6 @@
 import CommentBtn from "@/modules/home/comment-btn";
 import Pagination from "@/modules/home/pagination";
-import Image from "next/image";
+import Image from "next/image"; // Next.js 優化後的圖片組件
 import PostList from "./post-list";
 
 const Content = () => {
