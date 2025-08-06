@@ -1,7 +1,6 @@
 import { withApiHandler } from "@/utils/withApiHandler";
-import { success } from "@/utils/apiResponse";
+import { success, error } from "@/utils/apiResponse";
 import { NextRequest } from "next/server";
-import { error } from "console";
 import { BUSINESS_STATUS_CODE, DB_NAME } from "@/config/constants";
 import clientPromise from "@/lib/mongodb";
 import { v4 as uuidv4 } from "uuid";
